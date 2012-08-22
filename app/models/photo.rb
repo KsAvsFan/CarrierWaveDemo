@@ -3,4 +3,5 @@ class Photo < ActiveRecord::Base
   
   mount_uploader :file, FileUploader
   
+  has_many :photos
 end

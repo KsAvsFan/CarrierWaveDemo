@@ -10,6 +10,15 @@
   <%= @listing.price %>
 </p>
 
+<p>
+  <b>Photos:</b>
+  <% @listing.photos.each do |photo| %>
+    <%= image_tag photo.file %>
+  <% end %>
+</p>
 
+
+
+<%= link_to 'Add Photo', new_photo_path(listing_id: @listing.id) %> |
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
